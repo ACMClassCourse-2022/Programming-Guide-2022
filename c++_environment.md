@@ -1,0 +1,93 @@
+# 设定 C++ 环境
+
+本文档将协助设定适合于编写 C++ 程序的开发环境。
+
+请选择您的系统，以便跳转至适合您的系统的设定方式。
+- [Windows](#Windows)
+- [MacOS](#MacOS)
+- [Linux](#Linux)
+
+## Windows
+
+鉴于线上评测系统 (Online Judge) 采用 Linux 环境，为防止出现不同平台行为差异导致结果不同，且 Linux 环境更适合编写 C++ 代码，我们推荐使用 Windows Subsystem for Linux (WSL)，WSL 相对虚拟机来说更为轻量化，性能更好。
+
+关于使用 WSL 1 还是 WSL 2，我们推荐使用 WSL 2。[为什么？](FAQs.md#为什么建议使用-wsl2-而不是-wsl1)
+
+此部分参考微软官方文档
+
+### 先决条件
+
+必须运行 Windows 10 版本 2004 及更高版本（内部版本 19041 及更高版本）或 Windows 11。
+
+注：若要检查 Windows 版本及内部版本号，选择 Windows 徽标键 + R，然后键入「winver」，选择「确定」。可通过选择「开始」>「设置」>「Windows 更新」>「检查更新」来更新到最新的 Windows 版本。
+
+### 安装 WSL
+
+如果从未安装 WSL，请打开一个 Windows Terminal（推荐，需要在 Microsoft 商店或 GitHub 下载）、Powershell 或者 cmd（[不知道如何打开](FAQs.md#如何打开-terminal)？），并输入以下内容，此命令将启用所需的可选组件，下载最新的 Linux 内核，将 WSL 2 设置为默认值。
+```bash
+wsl --install
+```
+
+请务必仔细查看输出的信息，特别注意是否出现 `error` 或 `fail` 相关内容，如出现，请仔细阅读输出信息，然后设定相关的选项。如果没有错误，请**重启**。
+
+TODO: 常见错误信息
+
+### 安装发行版
+
+请在 Powershell 或 cmd 输入以下指令以确认是否已有安装 WSL 发行版
+```bash
+wsl -l -v
+```
+
+**如果没有显示发行版，请到 Microsoft store 下载 Ubuntu-20.04。**
+
+### 设定 Windows Terminal （可选）
+
+TODO
+
+### 设定 C++ 开发环境
+
+由于如果发行版包管理器不是最新的，安装应用可能出现问题，因此请先在**发行版的命令行**中输入以下内容更新
+```bash
+sudo apt update
+```
+
+如果感觉下载速度过慢（校内速度尚可），可以考虑更换软件源，具体请自行搜索，此操作随时可更换。
+
+然后安装必要的安装包
+- gcc
+- make
+- CMake
+- valgrind
+- git
+- gdb
+
+可以输入以下指令安装这些组件
+```bash
+sudo apt install build-essential make cmake gdb valgrind git
+```
+
+### 安装 CLion
+
+你可以在 JetBrains 官网[下载 CLion](https://www.jetbrains.com/clion/download/) 并安装。
+
+如果没有学信网的认证，请使用许可证激活。
+
+TODO：许可证激活
+
+### 设定 WSL 环境
+
+通过 CLion 打开任一项目（如没有项目，请新建一个），从顶栏 File > settings > Build, Execution, Deployment > Toolchains 打开工具链设定，点按「-」去除所有的工具链，然后点按「+」并选择 WSL，CLion 将会自动检查工具链完整性，如有缺少，请安装后重试。
+
+## MacOS
+TODO
+
+## Linux
+
+由于 Linux 包管理差异大，请自行安装以下组件：
+- gcc / clang
+- make
+- CMake
+- valgrind
+- git
+- gdb
