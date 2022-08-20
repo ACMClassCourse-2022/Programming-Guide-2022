@@ -32,7 +32,8 @@ wsl -l -v
 
 通常的输出是
 ```bash
-TODO
+  NAME            STATE           VERSION
+* Ubuntu          Running         2
 ```
 
 ## Terminal
