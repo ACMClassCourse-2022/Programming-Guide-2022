@@ -13,8 +13,6 @@
 
 关于使用 WSL 1 还是 WSL 2，我们推荐使用 WSL 2。[为什么？](FAQs.md#为什么建议使用-wsl2-而不是-wsl1)
 
-此部分参考微软官方文档
-
 ### 先决条件
 
 必须运行 Windows 10 版本 2004 及更高版本（内部版本 19041 及更高版本）或 Windows 11。
@@ -23,12 +21,12 @@
 
 ### 安装 WSL
 
-如果从未安装 WSL，请打开一个 Windows Terminal（推荐，需要在 Microsoft 商店或 GitHub 下载）、Powershell 或者 cmd（[不知道如何打开](FAQs.md#如何打开-terminal)？），并输入以下内容，此命令将启用所需的可选组件，下载最新的 Linux 内核，将 WSL 2 设置为默认值。
+如果从未安装 WSL，请打开一个 Windows Terminal（推荐，需要在 Microsoft 商店或 GitHub 下载）、Powershell 或者 cmd（[不知道如何打开？](FAQs.md#如何打开-terminal)），并输入以下内容，此命令将启用所需的可选组件，下载最新的 Linux 内核，将 WSL 2 设置为默认值。
 ```bash
 wsl --install
 ```
 
-请务必仔细查看输出的信息，特别注意是否出现 `error` 或 `fail` 相关内容，如出现，请仔细阅读输出信息，然后设定相关的选项。如果没有错误，请**重启**。
+请**务必**仔细查看输出的信息，特别注意是否出现 `error` 或 `fail` 相关内容，如出现，请仔细阅读输出信息，然后设定相关的选项。如果没有错误，请**重启**。
 
 TODO: 常见错误信息
 
@@ -39,11 +37,13 @@ TODO: 常见错误信息
 wsl -l -v
 ```
 
-**如果没有显示发行版，请到 Microsoft store 下载 Ubuntu-20.04。**
+**如果没有显示发行版，请到 Microsoft store 下载 Ubuntu 或 Ubuntu-22.04。**
 
 ### 设定 Windows Terminal （可选）
 
-TODO
+通常情况下，如果已经安装了 Ubuntu，Windows Terminal 会自动设定打开 Ubuntu。
+
+如果你希望能在 Windows 资源管理器中直接打开当前文件夹的 terminal，你可以在 Windows Terminal 顶栏下拉菜单中点击设置 > 默认配置 > 勾选「使用使用父进程目录」。
 
 ### 设定 C++ 开发环境
 
@@ -69,11 +69,9 @@ sudo apt install build-essential make cmake gdb valgrind git
 
 ### 安装 CLion
 
-你可以在 JetBrains 官网[下载 CLion](https://www.jetbrains.com/clion/download/) 并安装。
+你可以在 JetBrains 官网下载 [CLion](https://www.jetbrains.com/clion/download/) 并安装，也可以下载 [JetBrains ToolBox](https://www.jetbrains.com/zh-cn/toolbox-app/)。
 
-如果没有学信网的认证，请使用许可证激活。
-
-TODO：许可证激活
+如果没有学信网的认证，请使用许可证激活。如需要许可证激活，请参考上海交通大学软件授权中心上 [JetBrains（在线授权版）安装和授权流程](https://lic.sjtu.edu.cn/Default/huatishow/tag/MDAwMDAwMDAwMLJ4iqE/)操作。
 
 ### 设定 WSL 环境
 
@@ -91,3 +89,5 @@ TODO
 - valgrind
 - git
 - gdb
+
+安装这些组件后，请安装 CLion。（如果你觉得应当使用自由软件，你可以自行设定 VSCodium。）
