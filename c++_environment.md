@@ -35,10 +35,22 @@ wsl --install
 
 右键 Windows 图标，点击「Windows 终端（管理员）」。
 
-#### 常见错误信息
+#### 常见错误
+
+##### 安装过程中出现网络问题导致卡顿
+
+请关注安装到何时出问题：
+- 如果没有下载完「WSL 内核」，请下载 [WSL 内核](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)。
+- 如果「WSL 内核」已经下载完毕，请直接去 Microsoft Store 下载 Ubuntu。
+
+你也可以查看[微软官方文档](https://docs.microsoft.com/en-us/windows/wsl/install-manual)来检查问题。
+
+##### 未开启虚拟化
+
 ```bash
 请启用虚拟机平台 Windows 功能并确保在 BIOS 中启用虚拟化。
 ```
+
 此情况是由于 Windows 无法使用虚拟化来启动，请按照以下步骤解决：
 
 1. 请「控制面板」>「程序」>「程序和功能」>「启用或关闭 Windows 功能」中打开「虚拟机平台」。
