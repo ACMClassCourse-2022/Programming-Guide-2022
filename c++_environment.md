@@ -23,12 +23,17 @@
 
 ### 安装 WSL
 
-如果从未安装 WSL，请打开一个 Windows Terminal（推荐，需要在 Microsoft 商店或 GitHub 下载）、Powershell 或者 cmd（[不知道如何打开？](FAQs.md#如何打开命令行？)），并输入以下内容，此命令将启用所需的可选组件，下载最新的 Linux 内核，将 WSL 2 设置为默认值。
+如果从未安装 WSL，请打开一个管理员权限的 Windows Terminal（推荐，需要在 Microsoft Store 或 GitHub 下载）、Powershell 或者 cmd（[不知道如何打开？](FAQs.md#如何打开命令行？)），并输入以下内容，此命令将启用所需的可选组件，下载最新的 Linux 内核，将 WSL 2 设置为默认值。
+
 ```bash
 wsl --install
 ```
 
 请**务必**仔细查看输出的信息，特别注意是否出现 `error` 或 `fail` 相关内容，如出现，请仔细阅读输出信息，然后设定相关的选项。如果没有错误，请**重启**。
+
+#### Windows Terminal
+
+右键 Windows 图标，点击「Windows 终端（管理员）」。
 
 #### 常见错误信息
 ```bash
