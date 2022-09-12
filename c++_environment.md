@@ -97,6 +97,14 @@ TODO
 sudo apt install build-essential make cmake gdb valgrind git
 ```
 
+#### 安装 CLion
+
+你可以在 JetBrains 官网下载 [CLion](https://www.jetbrains.com/clion/download/) 并安装，也可以下载 [JetBrains ToolBox](https://www.jetbrains.com/zh-cn/toolbox-app/)。
+
+如果没有学信网的认证，请使用许可证激活。如需要许可证激活，请参考上海交通大学软件授权中心上 [JetBrains（在线授权版）安装和授权流程](https://lic.sjtu.edu.cn/Default/huatishow/tag/MDAwMDAwMDAwMLJ4iqE/)操作。
+
+通常情况下，CLion 会自动配置环境。你也可以通过 CLion 打开任一项目（如没有项目，请新建一个），从顶栏 File > settings > Build, Execution, Deployment > Toolchains 打开工具链设定检查。
+
 ### 其他发行版本
 
 请自行安装以下组件：

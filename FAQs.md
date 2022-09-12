@@ -59,5 +59,3 @@ Windows 平台的命令行工具有 cmd、Powershell 以及 Windows Terminal（�
 - Windows Terminal
 
 Windows Terminal 是一个应用，你可以采用任何打开应用的方式来开启 Windows Terminal。
-
-### 如何拷贝内容到 terminal？
