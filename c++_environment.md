@@ -2,6 +2,8 @@
 
 本文档将协助设定适合于编写 C++ 程序的开发环境。
 
+关于集成开发环境 (IDE)，为方便后续多文件编译，我们推荐使用 [CLion](https://www.jetbrains.com/clion/)。如果你知道如何设定其他开发环境，并能够处理多文件编译，你也可以不使用 CLion。但如果你是 Windows 用户，也请设定 WSL 环境。
+
 请选择您的系统，以便跳转至适合您的系统的设定方式。
 - [Windows](#Windows)
 - [MacOS](#MacOS)
