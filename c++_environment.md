@@ -82,7 +82,16 @@ TODO
 
 ## Linux
 
-由于 Linux 包管理差异大，请自行安装以下组件：
+### Ubuntu
+
+请打开一个命令行界面，然后输入
+```bash
+sudo apt install build-essential make cmake gdb valgrind git
+```
+
+### 其他发行版本
+
+请自行安装以下组件：
 - gcc / clang
 - make
 - CMake
