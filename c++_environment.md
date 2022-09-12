@@ -6,7 +6,7 @@
 
 请选择您的系统，以便跳转至适合您的系统的设定方式。
 - [Windows](#Windows)
-- [MacOS](#MacOS)
+- [macOS](#macOS)
 - [Linux](#Linux)
 
 ## Windows
@@ -100,7 +100,7 @@ sudo apt install build-essential make cmake gdb valgrind git
 \\wsl$\Ubuntu\usr\bin\valgrind
 ```
 
-## MacOS
+## macOS
 
 ### 切换至 Zsh
 
