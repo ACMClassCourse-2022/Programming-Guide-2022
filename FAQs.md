@@ -36,15 +36,15 @@ wsl -l -v
 * Ubuntu          Running         2
 ```
 
-## Terminal
-### 什么是 terminal？
+## 命令行
+### 什么是命令行？
 
-Terminal 即是俗称的命令行界面，与图形化界面不同的是，其必须通过键盘输入来完成绝大多数工作。命令行输入有着更高的自由性。
+命令行界面是一个仅有文字和符号组成的界面，其必须通过键盘输入来完成绝大多数工作。命令行输入有着更高的自由性。
 
-### 如何打开 terminal？
+### 如何打开命令行？
 
 #### Windows
-Windows 平台的 terminal 有 cmd、Powershell 以及 Windows Terminal（整合多个 terminal）。
+Windows 平台的命令行工具有 cmd、Powershell 以及 Windows Terminal（整合多个命令行工具）。
 
 下面将介绍打开不同终端的最便捷方式。
 
