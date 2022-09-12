@@ -91,6 +91,11 @@ sudo apt install build-essential make cmake gdb valgrind git
 ### 设定 Valgrind
 
 在 CLion 设定中搜索 Valgrind，将 Valgrind executable 修改为
+- 如果你使用的是 Ubuntu-22.04
+```
+\\wsl$\Ubuntu-22.04\usr\bin\valgrind
+```
+- 如果你使用的是 Ubuntu
 ```
 \\wsl$\Ubuntu\usr\bin\valgrind
 ```
