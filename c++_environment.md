@@ -87,6 +87,14 @@ sudo apt install build-essential make cmake gdb valgrind git
 
 通过 CLion 打开任一项目（如没有项目，请新建一个），从顶栏 File > settings > Build, Execution, Deployment > Toolchains 打开工具链设定，点按「-」去除所有的工具链，然后点按「+」并选择 WSL，CLion 将会自动检查工具链完整性，如有缺少，请安装后重试。
 
+
+### 设定 Valgrind
+
+在 CLion 设定中搜索 Valgrind，将 Valgrind executable 修改为
+```bash
+\\wsl$\Ubuntu\usr\bin\valgrind
+```
+
 ## MacOS
 TODO
 
