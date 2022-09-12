@@ -101,7 +101,64 @@ sudo apt install build-essential make cmake gdb valgrind git
 ```
 
 ## MacOS
-TODO
+
+### 切换至 Zsh
+
+旧版本 macOS 默认的 shell 是 Bash，为了获得更好的使用体验，建议切换到 Zsh，在 Terminal 中输入以检查 shell：
+
+```bash
+echo $SHELL
+```
+
+新版本 macOS 默认的 shell 即为 Zsh，无需切换。
+
+若为 Bash，可以使用以下命令切换至 Zsh：
+
+```bash
+chsh -s /bin/zsh
+```
+
+### 安装 Homebrew
+
+#### 原版（推荐）
+
+如若有梯子保证网络质量，或网络质量较好，在 Terminal 中输入：
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+#### 换源
+
+全部采用国内源，在 Terminal 中输入：
+
+```bash
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+
+#### 使用 Homebrew 的注意事项
+
+可使用 Homebrew 安装任意命令行程序，甚至可以用其管理 GUI 程序。
+
+某些时候，安装完毕后，Homebrew 会显示 Caveats，建议遵循相关提醒。
+
+### 安装相关组件
+
+在 Terminal 中输入：
+
+```bash
+brew install cmake git 
+```
+
+Valgrind 在 macOS 的最新版本中无法使用。若恰为旧版本且希望安装 valgrind，可自行安装。
+
+### 安装 Clion
+
+你可以在 JetBrains 官网下载 [CLion](https://www.jetbrains.com/clion/download/) 并安装，也可以下载 [JetBrains ToolBox](https://www.jetbrains.com/zh-cn/toolbox-app/)。
+
+如果没有学信网的认证，请使用许可证激活。如需要许可证激活，请参考上海交通大学软件授权中心上 [JetBrains（在线授权版）安装和授权流程](https://lic.sjtu.edu.cn/Default/huatishow/tag/MDAwMDAwMDAwMLJ4iqE/)操作。
+
+通常情况下，CLion 会自动配置环境。你也可以通过 CLion 打开任一项目（如没有项目，请新建一个），从顶栏 File > settings > Build, Execution, Deployment > Toolchains 打开工具链设定检查。
 
 ## Linux
 
