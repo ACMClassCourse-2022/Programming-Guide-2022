@@ -40,7 +40,7 @@ wsl --install
 ##### 安装过程中出现网络问题导致卡顿
 
 请关注安装到何时出问题：
-- 如果没有下载完「WSL 内核」，请下载 [WSL 内核](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)。
+- 如果没有下载完「WSL 内核」，请下载 [WSL 内核安装包](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi)。
 - 如果「WSL 内核」已经下载完毕，请直接去 Microsoft Store 下载 Ubuntu。
 
 你也可以查看[微软官方文档](https://docs.microsoft.com/en-us/windows/wsl/install-manual)来检查问题。
@@ -93,6 +93,10 @@ sudo apt update
 ```bash
 sudo apt install build-essential make cmake gdb valgrind git
 ```
+如果时间充裕，建议此时升级所有可升级的包。可以使用以下指令
+```bash
+sudo apt upgrade
+```
 
 ### 安装 CLion
 
@@ -100,13 +104,13 @@ sudo apt install build-essential make cmake gdb valgrind git
 
 如果没有学信网的认证，请使用许可证激活。如需要许可证激活，请参考上海交通大学软件授权中心上 [JetBrains（在线授权版）安装和授权流程](https://lic.sjtu.edu.cn/Default/huatishow/tag/MDAwMDAwMDAwMLJ4iqE/)操作。
 
-### 设定 WSL 环境
+### 设定 CLion 下 WSL 环境
 
 通过 CLion 打开任一项目（如没有项目，请新建一个），从顶栏 File > settings > Build, Execution, Deployment > Toolchains 打开工具链设定，点按「-」去除所有的工具链，然后点按「+」并选择 WSL，CLion 将会自动检查工具链完整性，如有缺少，请安装后重试。
 
 然后尝试运行 hello world。（常见错误： CMake 版本过低，建议把最低版本设定在 3.16。）
 
-### 设定 Valgrind
+### 设定 CLion 下 Valgrind
 
 在 CLion 设定中搜索 Valgrind，将 Valgrind executable 修改为
 - 如果你使用的是 Ubuntu-22.04
@@ -140,7 +144,7 @@ chsh -s /bin/zsh
 
 #### 原版（推荐）
 
-如若有梯子保证网络质量，或网络质量较好，在 Terminal 中输入：
+如若有条件连接绝大多数国际网站，可以在 Terminal 中输入：
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
