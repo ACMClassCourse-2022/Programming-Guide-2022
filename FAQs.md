@@ -50,7 +50,7 @@ Windows 平台的命令行工具有 cmd、Powershell 以及 Windows Terminal（�
 
 - cmd
 
-使用 「Windows 徽标」+R 组合键，并输入 `cmd` 后回车（或点击运行）。
+使用 <kbd>⊞ Win</kbd>+<kbd>R</kbd> 组合键，并输入 `cmd` 后回车（或点击运行）。
 
 - Powershell
 
