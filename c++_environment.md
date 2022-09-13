@@ -189,7 +189,7 @@ chsh -s /bin/zsh
 
 ### 安装 Homebrew
 
-#### 原版（推荐）
+#### 官方源（推荐）
 
 如若有条件连接绝大多数国际网站，可以在 Terminal 中输入：
 
@@ -197,7 +197,7 @@ chsh -s /bin/zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-#### 换源
+#### 国内源
 
 全部采用国内源，在 Terminal 中输入：
 
@@ -209,7 +209,7 @@ chsh -s /bin/zsh
 
 可使用 Homebrew 安装任意命令行程序，甚至可以用其管理 GUI 程序。
 
-某些时候，安装完毕后，Homebrew 会显示 Caveats，建议遵循相关提醒。
+某些时候，安装完毕后，Homebrew 会显示相关 Caveats，建议遵循相关提醒。
 
 ### 安装相关组件
 
@@ -228,6 +228,31 @@ Valgrind 在 macOS 的最新版本中无法使用。若恰为旧版本且希望�
 如果没有学信网的认证，请使用许可证激活。如需要许可证激活，请参考上海交通大学软件授权中心上 [JetBrains（在线授权版）安装和授权流程][jb-licensing] 操作。
 
 通常情况下，CLion 会自动配置环境。你也可以通过 CLion 打开任一项目（如没有项目，请新建一个），从顶栏 File > settings > Build, Execution, Deployment > Toolchains 打开工具链设定检查。
+
+### 安装并配置 VS Code（可选）
+
+你可以在 [VS Code 官网][vsc] 下载并安装 Visual Studio Code。
+
+CLion 是一个专为 C/C++ 设计的 IDE，而 VS Code 是一个较为通用的文本编辑器，你需要自行安装一些扩展以适应 C++ 的开发。
+
+我们推荐使用 [clangd] 而不是微软官方的 C++ 扩展，macOS 自带 clangd，无需额外安装。
+
+然后在 VS Code 里安装以下扩展: (扩展面板可以用 <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>x</kbd> 打开。)
+
+- [C/C++ Extension Pack][ext-cxx-pack]
+- [clangd][ext-clangd]
+  - 当 clangd 提示禁用 IntelliSense 时，选择禁用。
+
+### 安装 LLVM（可选）
+
+由于文件较大，安装时间较长，对网络质量要求高，且并不是特别必要，可自行选择是否安装。
+
+macOS 本身自带 LLVM，但由于其闭源，无法知道其中细节，可选用开源的 LLVM。
+
+```sh
+brew install llvm
+echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"' >> ~/.zshrc
+```
 
 ## Linux
 
